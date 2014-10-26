@@ -21,6 +21,7 @@ class MCP42xxx {
 public:
 	MCP42xxx(int selectSlavePin);
 	void setValue(uint8_t channel, uint8_t value);
+	void setPercent(uint8_t channel, uint8_t percentage);
 private:
 	int _selectSlavePin;
 };

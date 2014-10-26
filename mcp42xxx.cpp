@@ -25,3 +25,12 @@ void MCP42xxx::setValue(uint8_t channel, uint8_t value) {
   //deselect chip
   digitalWrite(_selectSlavePin,HIGH);
 }
+
+void MCP42xxx::setPercent(uint8_t channel, uint8_t percentage) {
+  //calculate value
+  uint8_t value = 0;
+  if(percentage != 0)
+    value = (percentage / 100.0) * 255;
+
+  setValue(channel, value);
+}

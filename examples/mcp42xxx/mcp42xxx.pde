@@ -20,6 +20,6 @@ void loop() {
 	delay(1000);
 
 	//Set all channel
-	mcp42xxx.setValue(CHANNEL_ALL, 1);
+	mcp42xxx.setPercent(CHANNEL_ALL, 30);
 	delay(2500);
 }
